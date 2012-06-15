@@ -1,0 +1,290 @@
+/*
+REPEATED STYLES THROUGHOUT SITE, CAN BE OVERWRITTEN IF DEFINED BELOW
+CAPPED CLASSES ARE REPEATABLE CLASSES THROUGHOUT THE APP
+NO CAMEL CASES ALLOWED, TWO WORD CLASSES MUST BE SEPERATED BY UNDERSCORE
+HTML ELEMENTS SHOULD BE ALL LOWERCASE
+HTML 5 ELEMENTS ARE TO BE HANDLED WITH CARE FOR IE6 &7 BROWSERS
+NAVIGATION ELEMENTS ARE ALL LIST ELEMENTS. EITHER UL OR OL AND SHOULD BE WRAPPED INSIDE A NAV HTML5 ELEMENT
+ANY ELEMENTS NEEDED TO STRETCH ACROSS THE PAGE SHOULD BE WRAPPED INSIDE A DIV
+ANY ELEMENTS NEEDED TO BE FLOATED SIDE BY SIDE SHOULD BE WRAPPED INSIDE A DIV WITH THE CLASS "COLUMN"ATTACHED
+*/
+.PATIENT_ALERT{background:#ffe3e3; border-bottom:5px solid #dbdbdb; border-right:1px solid #dbdbdb; border-left:1px solid #dbdbdb; width:auto}
+.POPUP_ALERT{}
+.ROUNDED_CORNERS{-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px}
+.LONG_SHADOWS{-moz-box-shadow:0 5px 5px 2px #333a45; -webkit-box-shadow:0 5px 5px 2px #333a45; box-shadow:0 5px 5px 2px #333a45}
+.SHORT_SHADOWS{-moz-box-shadow:0 5px 5px 2px #333; -webkit-box-shadow:0 5px 5px 2px #333; box-shadow:0 0px 5px 2px #333}
+.CLEARFIX{clear:both; height:0; font-size:0%; line-height:0%; float:none}
+div.COLUMN, .COLUMN{float:left; display:table-column}
+.WRAP{width:1000px; margin:0 auto}
+.SELECT{margin-top:11px; margin-left:5px}
+.INPUT{outline:none; padding:6px 7px 5px 7px; color:#7c7c7c; border:1px solid #5f6062; background:url(../imgs/input_bg.gif) repeat-x top left #cfcfcf; font-size:11px; width:140px; margin-left:5px}
+div.forms p.group .INPUT, div.forms div.group .INPUT{border:1px solid #999}
+.no-wrap{white-space:nowrap;}
+/** CUSTOM SELECT BOXES CLASSES COMING FROM A JQUERY STYLE */
+span.SELECT{font-size:11px; background:url(../imgs/input_bg.gif) repeat-x top left #cfcfcf; color:#000; padding:7px 7px; border:1px solid #5f6062; margin-top:11px}
+div.forms p.group span.SELECT, div.forms div.group span.SELECT{padding:2px 7px; border:1px solid #999; margin-top:0}
+ul.no_bullet{list-style:none; margin:0; padding:0}
+
+span.SELECT.CHANGED{color:#000}
+.SELECT_INNER{background:url(../imgs/input_arrow.gif) no-repeat center right}
+/*
+STANDARD HTML ELEMENTS
+*/
+body, html{min-height:100%; height:auto !important; height:100%}
+body{background:#556273; font-family:Verdana,Geneva,sans-serif; font-size:100%}
+ul{list-style:disc; padding-left:15px; font-size:80%}
+p{font-size:80%}
+a{text-decoration:none}
+div{font-size:100%; display:block}
+select{width:175px}
+#nav{font-size:100%}
+#header #nav{width:686px; float:left}
+#nav ul{list-style:none; padding:0; margin:0}
+#nav ul li{display:inline}
+#header #nav ul li a{float:left; display:block; background:url(../imgs/nav_a_bg.jpg) repeat-x top left; border-left:1px solid #272e38; border-right:1px solid #090a0e; color:#aaa; padding:19px 20px; font-size:12px; text-shadow:2px 2px 2px #000}
+#header #nav ul li a:hover, #header #nav ul li.current a{background:url(../imgs/nav_a_current_bg.jpg) repeat-x top left; color:#fff}
+h1{/*THIS IS ONLY FOR THE MAIN LOGO,NEVER USE H1 ANYWHERE ELSE*/font-size:18px; color:#fff; cursor:pointer; position:relative; padding:0px; font-weight:normal; width:280px; height:48px; border-right:1px solid #090a0e; padding-right:32px; background:url(../imgs/iLogo.png) no-repeat top left; float:left}
+h1 span{display:none}
+h2{font-size:110%}
+h3{font-size:100%}
+h4{font-size:90%}
+h5{font-size:80%}
+h6{font-size:70%}
+/*CONTAINER CLASSES*/
+#header{background:url(../imgs/header_bg.jpg) repeat-x left top; height:50px; width:100%; z-index:2; margin-bottom:15px; position:fixed; top:0; left:0; width:100%}
+#content{background:#fff; border:7px solid #364251; position:relative; z-index:1; min-height:400px; height:auto !important; height:400px; width:986px; margin-top:65px}
+#toolbar{background:url(../imgs/toolbar_bg.jpg) repeat-x top left; height:53px}
+#toolbar h2{background:url(../imgs/patient-icon.gif) no-repeat center left; color:#fff; margin:10px 15px 0 10px; padding:5px 50px 5px 30px; text-transform:uppercase; font-size:16px; text-shadow:0px 0px 5px #000; width:191px; float:left}
+a.silence{background:url(../imgs/alarms_button.gif) no-repeat top left; color:#fff; display:block; float:right; font-size:12px; height:23px; padding-left:30px; padding-top:6px; width:119px; margin:11px 15px 0 0}
+div#tabs{margin:10px}
+div#tabs ul{margin:0; padding:0; list-style:none}
+div#tabs ul li{display:inline; width:50%; float:left; position:relative}
+div#tabs ul li a{display:block; text-align:center; background:url(../imgs/active_tab.jpg) repeat-x top left; color:#ccc; padding:8px 0; text-shadow:2px 2px 2px #000; position:relative}
+div#tabs ul li.current a{background:url(../imgs/current_tab.jpg) repeat-x top left; color:#fff}
+div#tabs ul li div.tab_arrow{display:none}
+div#tabs ul li.current div.tab_arrow{display:block; position:absolute; left:0; bottom:-5px; background:url(../imgs/active_tab_arrow.jpg) no-repeat top center; width:100%; height:5px}
+div#tabs ul li a:hover{color:#fff; text-shadow:0 0 0 #000}
+div#tabs ul li a img{display:none}
+div#tabs ul li.current a img{display:block; position:absolute; top:29px; left:49%; z-index:2}
+div.patient{cursor:pointer; margin:0 10px 10px; position:relative; width:auto; z-index:1}
+div.patient:hover{-moz-box-shadow:0 0 5px 2px #333; -webkit-box-shadow:0 0 5px 2px #333; box-shadow:0 0 5px 2px #333}
+div.patient_header{background:url(../imgs/item_header.jpg) repeat-x top left; height:29px}
+div.patient ul{list-style:none; margin:0; padding:0}
+div.patient_header ul li{border-left:1px solid #112237; border-right:1px solid #295690; color:#fff; float:left; font-size:12px; padding:8px 15px}
+div.patient_header ul li.name{border-left:none; border-right:none; font-weight:700; padding-left:10px; text-transform:uppercase; width:316px}
+div.patient_header ul li.id{border-left:none; width:119px; text-align:right}
+div.patient_header ul li.room{width:125px; text-align:center}
+div.patient_header ul li.dob{width:110px; text-align:center}
+div.patient div.patient_header ul li.bg{border-right:none; text-align:center; width:142px}
+div.patient_info{background-color:#fff; border:1px solid #aaa; font-size:12px; padding:6px 8px; position:relative}
+div.patient_info ul li{font-size:11px}
+div.msg{color:#333; font-size:32px; font-weight:700; padding:12px 0; position:absolute; right:0; text-align:center; top:30px; width:178px; z-index:1000}
+div.alert div.msg{background:#fd908c; border-left:1px double #fff; color:#fff; font-size:22px; font-weight:700; padding:6px 0}
+div#iv div.msg{padding:13px 0}
+div#iv div.alert div.msg{padding:16px 0 17px 0; margin-right:1px; border-left:1px solid #e83232; width:173px;}
+div#subq div.alert div.msg{margin-right:1px; border-left:1px solid #e83232; padding:6px 0 7px 0}
+div.alert div.patient_info{background-color:#ffe3e3; border:1px solid #e83232; width:auto}
+div.patient_info ul{float:left; width:260px}
+div.patient_info li{color:#333; padding:5px 0}
+div.patient_info li span{font-weight:700; text-transform:uppercase}
+div.patient_info li.title{font-size:14px; font-weight:700; text-transform:uppercase}
+div.pediatric_icon{-moz-box-shadow:0 0 10px 2px #333; -webkit-box-shadow:0 0 10px 2px #333; background:url(../imgs/pediatric.jpg) no-repeat top left; box-shadow:0 0 10px 2px #333; height:89px; left:-29px; position:absolute; top:0; width:29px}
+div.patient div.pediatric_icon{display:none}
+div.patient.pediatric div.pediatric_icon{display:block}
+ul.buttons{float:right; padding-top:10px; width:54%; font-size:11px; margin-left:5px; margin-top:0; padding-top:0; width:525px; margin:10px}
+ul.buttons li{display:inline}
+ul.buttons li a{-moz-border-radius:5px; -webkit-border-radius:5px; background:url(../imgs/round_button_bg.jpg) repeat-x top left #111a29; border:1px solid #15212f; border-radius:5px; color:#fff; float:left; font-size:11px; margin-right:5px; padding:8px}
+a.button.add, ul.action_nav li a{background:url(../imgs/round_button_bg.jpg) repeat-x top left #111a29; border:1px solid #15212f; color:#fff; font-size:11px; margin-right:5px; padding:6px 10px}
+.add{margin:10px}
+table.details-table{border-right:1px solid #d8d9dd; border-top:1px solid #d8d9dd; font-size:12px; width:100%}
+table.zebra-table tr.rowColor td{background-color:#e9ecf1}
+table.details-table td, table.details-table th{border-bottom:1px solid #d8d9dd; border-left:1px solid #d8d9dd; padding:10px}
+table.details-table th{background-color:#e9ecf1; color:#4d5057; font-weight:700; text-align:center}
+table.details-table tr.alert td{color:#ab3f3d}
+table.details-table td.correction{color:#0201c9}
+table.details-table td.name{white-space:nowrap}
+div.admin_nav{width:250px; float:left; background:#364251; border-right:6px solid #364251}
+div.admin_nav h2{padding:10px; color:#fff; font-size:18px; border-bottom:1px dotted #666}
+div.admin_nav h3{padding:10px; color:#fff; font-size:16px; border-bottom:1px dotted #666}
+div.admin_nav ul{list-style:none; margin:0; padding:0}
+div.admin_nav ul li{line-height:14px; font-size:12px}
+div.admin_nav ul li a{padding:10px; color:#fff; display:block; border-bottom:1px dotted #666}
+div.admin_nav ul li a:hover, div.admin_nav ul li.current a{background:#222}
+div.column_content{margin-left:260px; padding:10px}
+div#footer{padding:10px 0; font-size:11px}
+div#footer p{width:50%; float:left; color:#ccc; line-height:12px}
+div#footer p.text-right{text-align:right}
+div#footer a{color:#ccc; text-decoration:none}
+div#footer a:hover{color:#fff}
+div.padd{padding:10px}
+div.learning_center_logo{}
+div.manual_icon{}
+h3.manual_text a{display:block; background:url(../imgs/operator-manual-icon.png) no-repeat center left; padding:10px 10px 10px 80px; color:#222; font-size:24px; text-align:left}
+h3.manual_text a:hover{}
+div#education{background:url(../imgs/learning_page.jpg) no-repeat center left; width:auto; height:574px}
+div#education div.column{width:50%; float:left}
+div#education ul{list-style:none; margin:473px 0 0 15px; padding:0; float:left; width:99%}
+div#education ul li a{float:left; margin-right:10px}
+ul.action_nav{list-style:none; margin:0 5px 0 0; padding:0; float:right; width:50%}
+ul.action_nav li a{margin-top:12px; float:left}
+ul.action_nav li{float:left}
+input#quick_search_admin{float:right; margin-top:10px; margin-right:10px}
+ul.webinars{margin-top:485px; float:left; width:100%; margin-left:60px}
+ul.webinars li{display:inline}
+ul.webinars li a img{width:115px}
+ul.webinars li a{float:left; margin-right:30px}
+div.forms p.group, div.forms div.group{font-size:12px; padding:5px 0}
+label.required span{color:red}
+p.group label,div.group label{width:30%; display:block; float:left}
+div.forms p.group input[type=text], div.forms p.group input[type=password]{width:250px}
+div.forms p.group p{margin-left:30%; float:left}
+div.forms div.buttons input[type=submit]{background:url(../imgs/button_green.png) repeat-x top left; border-color:#5E8C22 #6B9B2B; border-radius:5px; -webikit-border-radius:5px; -moz-border-radius:5px; border-style:solid; border-width:1px; cursor:pointer; height:30px; min-width:70px}
+div.forms div.buttons input[type=reset]{background:url(../imgs/button_white.png) repeat-x top left; border-color:#999; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-style:solid; border-width:1px; cursor:pointer; height:30px; min-width:70px}
+div.forms div.buttons{padding-left:30.5%; padding-top:15px}
+
+/*patient details page*/
+div.detailed-info{background:url("../imgs/detailed_bg.jpg") repeat-x scroll left bottom #FFF; border-left:1px solid #DDD; border-right:1px solid #DDD; margin:0; min-height:200px; padding:15px}
+div.column{float:left}
+div.info{width:250px}
+div.box{background:url("../imgs/box_bg.jpg") repeat-x scroll left top #FFF; border:1px solid #B3B3B3; box-shadow:0 0 5px 2px #BBB; font-size:12px; margin-right:5px; min-height:80px; min-width:175px; height:260px}
+div.pediatric_horizontal{background:url("../imgs/enter_bg_bg.jpg") repeat-x scroll left top #DEB609; border-bottom:1px solid #F4C91B; color:#333; font-size:12px; font-weight:700; padding:5px 15px}
+div.meal-bolus h2, ul.stats, div.padd, div.daily-basal-dose, div.daily-basal-dose, div.next-bg-due, div.insulin-type, div.enter-bg{padding:15px; list-style:none;}
+ul.stats li{padding:5px 0}
+ul.stats li span{font-weight:700; text-transform:uppercase}
+div#patient_details div.detailed-info div.single div.box ul.stats {height:186px;}
+.under18{color:#E84905}
+ul.edit{border-top:1px solid #B7B7B7}
+div.toolbar_header ul.buttons li, div.insulin-type ul.brands li, ul.edit li, ul.table-tabs li{display:inline}
+ul.edit li a{color:#333; display:block; float:left; padding:15px; text-align:center}
+ul.edit li.edit a{background:url("../imgs/edit_icon.jpg") no-repeat scroll left center transparent; margin-left:10px; padding-left:20px}
+ul.edit li.left a{border-right:1px solid #B7B7B7}
+div.current-insulin, div.current-bg{height:110px}
+div.box{background:url("../imgs/box_bg.jpg") repeat-x scroll left top #FFF; border:1px solid #B3B3B3; box-shadow:0 0 5px 2px #BBB; font-size:12px; margin-right:5px; min-height:80px; min-width:175px}
+div.box h2{color:#333; font-size:12px; font-weight:700; text-transform:uppercase}
+div.box div.val{color:#4C8ECB; font-size:32px; font-weight:700; padding:10px 0 0 10px}
+div.box div.ammount{color:#333; font-size:12px; font-weight:700; padding:0 10px}
+div.target-range, div.insulin-concentration{height:81px; margin-top:5px}
+div.window{display:none}
+div.meal-bolus-activated h2.title-button{background:url("../imgs/meal-bolus-button-bg.jpg") repeat-x scroll left top #FFF; border-color:#BDBDBD #AAA #919191 #ACACAC; border-radius:5px 5px 5px 5px; border-style:solid; border-width:1px; color:#C83335; font-size:16px; font-weight:400; margin-bottom:5px; padding:10px; text-align:center; text-transform:capitalize}
+div.time{background:url("../imgs/time_bg.jpg") repeat-x scroll left top #FFF; border-color:#5E778D #ACBAC5 #EAEBEF; border-radius:5px 5px 5px 5px; border-style:solid; border-width:1px; color:#333; font-size:40px; font-weight:700; padding:10px; text-align:center}
+
+a.meal-buttons{color:#333; font-size:12px; font-weight:700; padding:10px 15px; text-align:center}
+div.meal-bolus-activated a.enter-bg{background:url("../imgs/meal-bolus-enter-bg.jpg") repeat-x scroll left top #DDB508; border-color:#F3C81A #F5C920 #F2C91F #F2C919; border-style:solid; border-width:1px; float:left; margin:0 5px 0 0}
+div.meal-bolus-activated a.stop-meal{background:url("../imgs/stop_meal_bg.jpg") repeat-x scroll left top #55B3F3; border-color:#69BEF5 #6EBFF6 #6EBFF7 #68BFF4; border-style:solid; border-width:1px; display:block; float:left}
+div.meal-buttons{margin-top:10px; padding-left:21px}
+div.box.meal-bolus-activated{width:235px; margin-right:0px; height:228px}
+div.detailed-info div.meal-bolus-activated a.enter-bg{padding:10px;}
+div.info{height:auto !important}
+div.separater{background:url("../imgs/detailed_separater.jpg") repeat-x scroll left top transparent; float:left; height:18px; margin:0; padding:0; width:100%}
+div.separater-vert {background:url("../imgs/detailed_separater_vert.jpg") repeat-y scroll left top transparent; height:967px; margin:0; padding:0; width:18px;}
+div.line-graph{background:url("../imgs/graph_bg.jpg") no-repeat scroll center bottom transparent; margin:0 15px; padding-bottom:32px; text-align:center}
+div.patient-chart{margin:0 15px 15px}
+ul.table-tabs{background:url("../imgs/item_header.jpg") repeat-x scroll left top #21314B; height:30px; margin:0; padding:0}
+ul.table-tabs li a{color:#FFF; display:block; float:left; font-size:14px; font-weight:700; padding:8px 15px}
+ul.table-tabs li.active a, ul.table-tabs li a:hover{background:url("../imgs/current_tabletabs.jpg") repeat-x scroll left top transparent}
+div.meal-bolus{height:205px}
+div.meal-bolus.subq{height:258px}
+div.meal-bolus ul.stats{padding-top:5px}
+div.meal-bolus ul.stats li{border-bottom:1px solid #353535; color:#4C8ECB}
+ul.stats li{padding:5px 0}
+div.meal-bolus ul.stats li span{color:#353535; display:block; float:left; width:45%}
+ul.stats li span{font-weight:700; text-transform:uppercase}
+div.insulin-type{height:91px; margin-right:0; text-align:center; width:200px}
+div.insulin-type ul.brands li{float:left; margin:10px; font-size:12px; font-weight:700}
+div.enter-bg{margin-right:0; margin-top:5px; height:100px}
+a.enter-bg{background:url("../imgs/enter_bg_bg.jpg") repeat-x scroll left top #DEB609;border:1px solid #F4C91B;border-radius:5px 5px 5px 5px;color:#333;display:block;font-size:12px;font-weight:700;margin-left:75px;margin-top:15px;padding:5px 10px;width:60px}
+a.enter-bg.subq{background:url("../imgs/enter_bg_bg.jpg") repeat-x scroll left top #DEB609;border:1px solid #F4C91B;border-radius:5px 5px 5px 5px;color:#333;display:block;font-size:12px;font-weight:700;margin-left:55px;margin-top:35px;padding:5px 10px;width:60px}
+a.enter-bg.subq.inline {display:inline; float:right; margin-top:0; margin-left:5px;width:auto;}
+a.enter-bg.subq.edit-patient.inline { margin-top:15px; margin-right:5px;}
+a.enter-bg.subq.inline:hover{background-image:none;background-color:#007fc8;border-color:#64c1f7;color:#fff;}
+ul.stats li a.enter-bg.subq.inline { float:right; margin-top:0px;}
+div.start_box{min-height:80px; min-width:175px;}
+div.start_new {float:left; margin-left:5px; width:660px;}
+div.detailed-info.start-page { min-height:110px;}
+div.new_box {height:auto !important; margin-bottom:10px; padding:10px;}
+div.new_patient_buttons {float:right; margin-right:5px;}
+div.box h2.new_patient {color: #4C8ECB; font-size: 14px; font-weight: 700;}
+
+div#navigate {padding:10px 0 0;}
+div#navigate ul {padding-left:0;float:left;width:92%;height:25px;list-style:none;}
+ul#pagination li {margin-bottom:5px;display:inline;float:left;padding:5px 8px;margin-right:5px;font-size:11px;-webkit-border-radius:5px;border-radius:5px;-moz-border-radius:5px;border:1px solid #c2c2c2;color:#333;background:url(../imgs/page_bg.jpg) repeat-x top left #EaEaEa;cursor:pointer;}
+ul#pagination li.current, ul#pagination li:hover {background:url(../imgs/active_page.jpg) repeat-x top left #3F68A1;color:#fff;border:1px solid #1F324D;cursor:default;}
+ul#pagination li:hover{cursor:pointer;}
+ul#pagination li.prev, ul#pagination li.next {display:none;}
+
+td.highlight{text-transform:capitalize;width:289px;}
+td.patientID {width:113px;text-align:center;}
+td.dob{width:138px;text-align:center;}
+td.unit{width:252px;text-align:center;}
+td.roomnum{width:68px;text-align:center;}
+
+div#navigate.homepage_paginate{
+	padding-top:0;
+	padding-left:15px;	
+	padding-bottom:10px;
+	margin-bottom:8px;
+}
+select.SELECT.filter {
+	width:50px;
+	float:right;
+	margin-top:0;	
+}
+div#navigate span.SELECT{margin-top:0;}
+div.detailed-info.adult div.pediatric_horizontal {display:none;}
+
+/*end*/
+.datepicker{border-collapse:collapse; border:2px solid #999; position:absolute}
+.datepicker tr.controls th{height:22px; font-size:11px}
+.datepicker select{font-size:11px}
+.datepicker tr.days th{height:18px}
+.datepicker tfoot td{height:18px; text-align:center; text-transform:capitalize}
+.datepicker th, .datepicker tfoot td{background:#eee; font:10px/18px Verdana,Arial,Helvetica,sans-serif}
+.datepicker th span, .datepicker tfoot td span{font-weight:bold}
+
+.datepicker tbody td{width:24px; height:24px; border:1px solid #ccc; font:11px/22px Arial,Helvetica,sans-serif; text-align:center; background:#fff}
+.datepicker tbody td.date{cursor:pointer}
+.datepicker tbody td.date.over{background-color:#9ff}
+.datepicker tbody td.date.chosen{font-weight:bold; background-color:#cfc}
+
+#fade{background:#000;display:none;height:100%;left:0;opacity:.80;position:fixed;top:0;width:100%;z-index:3}
+div.popup_window{-moz-border-radius:10px;-moz-box-shadow:0 0 20px #000;-webkit-border-radius:10px;-webkit-box-shadow:0 0 20px #000;background:#244570;border:1px solid #21324c;border-radius:10px;box-shadow:0 0 20px #000;display:none;float:left;left:50%;position:fixed;top:50%;z-index:99999;min-width:550px;width:auto;width:550px;}
+div.popup_window h1{-moz-border-radius:10px;-webkit-border-radius:10px;background:url(../imgs/pop-title-bg.jpg) repeat-x top left #244570;border-radius:10px;color:#fff;font-size:14px;font-weight:700;padding:5px 10px;float:none;width:auto;height:auto;border:none;text-transform:capitalize;}
+div.popup_window div.popup_content{background-color:#fff;font-size:12px;margin:2px;min-height:250px}
+div.popup_window div.popup_content ul.patient_details{background-color:#f6f6f6;border-bottom:1px solid #cfcfcf;height:32px;margin-bottom:10px;padding-left:0;}
+div.popup_window div.popup_content ul.patient_details li{display:block;float:left;padding:10px 0 10px 10px;width:45%}
+div.popup_window div.popup_content ul.patient_details li span{font-weight:700}
+div.popup_window div.popup_content ul.popup_form li{display:block;padding:5px 0 5px 10px}
+div.popup_window div.popup_content ul.popup_form li label{color:#333;float:left;font-weight:700;width:45%}
+div.popup_window div.popup_content ul.popup_form li label.radio{width:auto;float:none;font-weight:normal;}
+div.popup_window div.popup_content ul.popup_form li input[type=text]{border-color:#ddd;padding:5px;min-width:200px;}
+div.popup_window div.popup_content ul.popup_form li span{color:#666;font-size:11px;padding-left:5px}
+div.popup_window div.popup_content input[type=submit],div.popup_window div.popup_content input[type=reset]{float:right;margin-right:10px;margin-top:15px}
+div.popup_window div.popup_content div.form_buttons {padding-bottom:10px;}
+div.popup_window div.popup_content div.form_buttons input[type=submit]{-moz-border-radius:5px;-webkit-border-radius:5px;background:url(../imgs/next-bg.jpg) repeat-x top left #6aad2c;border:1px solid #618a24;border-radius:5px;color:#333;padding:5px 10px}
+div.popup_window div.popup_content div.form_buttons input[type=reset]{-moz-border-radius:5px;-webkit-border-radius:5px;background:url(../imgs/cancel-bg.jpg) top left #fff;border:1px solid #979694;border-radius:5px;color:#333;padding:5px 10px}
+div.popup_window div.popup_content div.check_box {padding:10px;}
+
+div.popup_window div.popup_content div.check_box ul li.title {float:left;width:75%;}
+div.popup_window div.popup_content div.check_box ul li h3.amount {font-size:36px;font-weight:bold;color:#ff6600;margin-left:-5px;}
+
+div.popup_window div.popup_content div.check_box h4.desc {font-size:11px;}
+
+div.popup_window div.popup_content div.check_box p.note {padding:10px 0;line-height:12px;}
+div.check_box ul {list-style:none;}
+li.checkbox {float:right;width:77px;height:80px;}
+div.popup_window div.popup_content div.check_box ul li.checkbox.disabled{cursor:pointer;background:url(../imgs/check_off.jpg) no-repeat top left;}
+div.popup_window div.popup_content div.check_box ul li.checkbox.enabled {cursor:pointer;background:url(../imgs/check_on.jpg) no-repeat top left;}
+
+/*toggle effect*/
+div.popup_window div.popup_content div.check_box.hidden {display:none;}
+
+div.popup_window div.check_box {border-top:1px solid #ddd;padding:10px 0;margin-top:5px;}
+
+div.popup_window h2 {font-size:16px;color:#0c64bd;clear:both;margin:10px;}
+div.popup_window div.popup_content div.check_box ul li h2 {color:#000;text-decoration:none;border-bottom:none;margin:0;font-size:12px;}
+div.form select.SELECT{height:auto;}
+
+/*temp*/
+div.tooltip div.details {display:none; position:absolute; width:150px; top:0; right:-180px;}
+div.tooltip {background: url("../imgs/button_blue.png") repeat-x scroll left top transparent;border-color: #5E8C22 #6B9B2B; border-style: solid;border-width: 1px;cursor: pointer; width: 20px; margin:0; text-align:center; padding:5px 0; position:relative; float:left;display:none;}
+p.half {}

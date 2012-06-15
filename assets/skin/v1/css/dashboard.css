@@ -1,0 +1,145 @@
+body,html
+{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+body
+{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background:#000;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	/*Default Color*/
+	color:#fff;
+}
+.wrapper
+{
+	width:	1221px;
+	margin: 0 auto;
+}
+.rounded_corners
+{
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;	
+}
+input.input 
+{
+	width:414px;
+	border:1px solid #333;
+	padding:5px;	
+	float:left;
+}
+img.bg 
+{
+	/* Set rules to fill background */
+	min-height: 100%;
+	min-width: 1024px;
+
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+	z-index:1;
+}
+
+@media screen and (max-width: 1024px) 
+{ /* Specific to this particular image */
+	img.bg 
+	{
+		left: 50%;
+		margin-left: -512px;   /* 50% */
+	}
+}
+.clear{height:0;padding:0;line-height:0;font-size:0;clear:both;}
+#header 
+{
+	position:fixed;
+	z-index:2;	
+	width:100%;
+	min-height:72px;
+	border-bottom:1px solid #e14f00;
+	background-color:#0d100e;
+}
+
+#header h1
+{
+	width:220px;
+	height:41px;
+	background:url(../imgs/ampthis_logo.png) no-repeat top left;
+	margin-top:28px;
+	float:left;
+}
+
+#header h1 span
+{
+	display:none;	
+}
+
+#search
+{
+	margin-left:43px;	
+	margin-top:27px;
+	float:left;
+	width:457px;
+}
+
+#search h4 
+{
+	text-transform:uppercase;
+	font-size:14px;
+	color:#2ab5be;
+	font-weight:bold;
+}
+
+#search a.arrow
+{
+	background:url(../imgs/start_arrow.png) no-repeat top left;
+	width:21px;
+	height:24px;	
+	float:left;
+	margin-top:1px;
+	margin-left:4px;
+}
+
+
+#actions h2 {
+	color:#2ab5be;
+	background:url(../imgs/start_arrow.png) no-repeat center right;
+	padding-right:25px;
+	font-size:24px;
+	text-transform:uppercase;	
+	float:left;
+	width:68px;
+	margin-top:40px;
+	margin-left:15px;
+}
+ul.pages
+{
+	list-style:none;
+	padding:0;margin:0;
+	width:170px;
+	float:left;
+	margin-top:4px;
+	margin-left:15px;
+}
+ul.pages li {display:block;width:170px;height:22px;}
+ul.pages li a {display:block;padding:5px;color:#fff;font-size:11px;text-decoration:none;}
+ul.pages li.label a {background:#28abb4;}
+ul.pages li.venue a {background:#dad307;}
+ul.pages li.band a {background:#c44702;}
+ul.pages li a:hover {background:#819701;}
+
+ul.action_nav{width:162px;float:left;margin:0;padding:0;list-style:none;}
+ul.action_nav li{display:inline;}
+ul.action_nav li a {width:17px;height:17px;background:url(../imgs/dashboard_nav_off.png) no-repeat top left;}
+ul.action_nav li a:hover {background:url(../imgs/dashboard_nav_on.png) no-repeat top left;}
+ul.action_nav li a span{display:none;}
